@@ -5,7 +5,7 @@ from raterapi.models import Category
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ("name",)
+        fields = ("id", "name",)
 
 class CategoryViewSet(viewsets.ViewSet):
     def list(self, request):
