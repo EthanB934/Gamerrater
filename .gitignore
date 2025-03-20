@@ -6,6 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
+# ERD
+*.dbml
 # Distribution / packaging
 .Python
 build/
