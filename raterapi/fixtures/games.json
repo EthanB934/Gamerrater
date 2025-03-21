@@ -1,0 +1,152 @@
+[
+    {
+        "model": "raterapi.game",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "title": "Sekiro - Shadows Die Twice",
+            "picture_of_game": "https://image.api.playstation.com/vulcan/img/rnd/202010/2723/knxU5uU5aKvQChKX5OvWtSGC.png",
+            "description": "A lone shinobi, whose young master has been kidnapped",
+            "designer": "Masaru Yamamura",
+            "year_released": 2019,
+            "player_count": 10112,
+            "play_time": 12,
+            "age_to_play": 17
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "title": "The Witcher 3: Wild Hunt",
+            "picture_of_game": "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png",
+            "description": "An open-world RPG set in a visually stunning fantasy universe full of meaningful choices and impactful consequences.",
+            "designer": "Konrad Tomaszkiewicz",
+            "year_released": 2015,
+            "player_count": 50000,
+            "play_time": 50,
+            "age_to_play": 18
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "title": "Cyberpunk 2077",
+            "picture_of_game": "https://image.api.playstation.com/vulcan/ap/rnd/202111/3013/bxSj4jO0KBqUgAbH3zuNjCje.jpg?w=440",
+            "description": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour, and body modification.",
+            "designer": "Adam Badowski",
+            "year_released": 2020,
+            "player_count": 30000,
+            "play_time": 40,
+            "age_to_play": 18
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "title": "Red Dead Redemption 2",
+            "picture_of_game": "https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png",
+            "description": "An epic tale of life in America at the dawn of the modern age.",
+            "designer": "Dan Houser",
+            "year_released": 2018,
+            "player_count": 60000,
+            "play_time": 60,
+            "age_to_play": 18
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 5,
+        "fields": {
+            "user": 5,
+            "title": "The Legend of Zelda: Breath of the Wild",
+            "picture_of_game": "https://assets.nintendo.com/image/upload/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58",
+            "description": "Step into a world of discovery, exploration, and adventure in The Legend of Zelda: Breath of the Wild.",
+            "designer": "Hidemaro Fujibayashi",
+            "year_released": 2017,
+            "player_count": 70000,
+            "play_time": 100,
+            "age_to_play": 12
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 6,
+        "fields": {
+            "user": 6,
+            "title": "God of War",
+            "picture_of_game": "https://image.api.playstation.com/vulcan/img/rnd/202008/2617/gCLof29n2eeFxVRGpo90xW1A.jpg",
+            "description": "A new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology.",
+            "designer": "Cory Barlog",
+            "year_released": 2018,
+            "player_count": 80000,
+            "play_time": 30,
+            "age_to_play": 18
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 7,
+        "fields": {
+            "user": 7,
+            "title": "Horizon Zero Dawn",
+            "picture_of_game": "https://image.api.playstation.com/vulcan/ap/rnd/202409/2716/16b33fa9a5c7285ba86a035b4a1c5f8eb430b407eae35ffd.png",
+            "description": "Experience Aloy's legendary quest to unravel the mysteries of a future Earth ruled by Machines.",
+            "designer": "Mathijs de Jonge",
+            "year_released": 2017,
+            "player_count": 90000,
+            "play_time": 50,
+            "age_to_play": 16
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 8,
+        "fields": {
+            "user": 8,
+            "title": "Ghost of Tsushima",
+            "picture_of_game": "https://image.api.playstation.com/vulcan/ap/rnd/202010/0222/b3iB2zf2xHj9shC0XDTULxND.png",
+            "description": "In the late 13th century, a ruthless Mongol army invades Tsushima in a quest to conquer all of Japan.",
+            "designer": "Nate Fox",
+            "year_released": 2020,
+            "player_count": 100000,
+            "play_time": 40,
+            "age_to_play": 17
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 9,
+        "fields": {
+            "user": 9,
+            "title": "Assassin's Creed Valhalla",
+            "picture_of_game": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6ZAlQrGYxXi8Bo8PuhJd5g/206c57ecb27e58b4555089c6c80d3db5/ACV_meta.png",
+            "description": "Become Eivor, a legendary Viking warrior on a quest for glory.",
+            "designer": "Eric Baptizat",
+            "year_released": 2020,
+            "player_count": 110000,
+            "play_time": 60,
+            "age_to_play": 18
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 10,
+        "fields": {
+            "user": 10,
+            "title": "Final Fantasy VII Remake",
+            "picture_of_game": "https://image.api.playstation.com/vulcan/img/cfn/11307-dNapclgq_VqNtQ98Xp_LxovvAdjd5AknZhd_-k2Cckq9FPtKDXAHk-ODCfvDKChH6hkEO0VLtj7Vk4E-Z8G707oe0N.png",
+            "description": "A reimagining of the iconic original with unforgettable characters, a mind-blowing story, and epic battles.",
+            "designer": "Tetsuya Nomura",
+            "year_released": 2020,
+            "player_count": 120000,
+            "play_time": 40,
+            "age_to_play": 16
+        }
+    }
+]
