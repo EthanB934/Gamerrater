@@ -3,12 +3,10 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include, path
 from rest_framework import routers
-from raterapi.views import CategoryViewSet, UserViewSet, GameViewSet, GamePictureViewSet
+from raterapi.views import CategoryViewSet, UserViewSet
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"categories", CategoryViewSet, "category")
-router.register(r"games", GameViewSet, "game")
-router.register(r"gamepictures", GamePictureViewSet, "gamepicture")
 
 urlpatterns = [
     path("", include(router.urls)),
