@@ -1,0 +1,77 @@
+[
+    {
+        "model": "raterapi.game",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "title": "Sekiro: Shadows Die Twice",
+            "description": "A lone shinobi, whose young master has been kidnapped.",
+            "designer": "Masaru Yamamura",
+            "year_released": 2019,
+            "player_count": 1,
+            "play_time": 50,
+            "age_to_play": 17,
+            "categories": [1, 2]
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "title": "The Witcher 3: Wild Hunt",
+            "description": "An open-world RPG set in a visually stunning fantasy universe full of meaningful choices and impactful consequences.",
+            "designer": "Konrad Tomaszkiewicz",
+            "year_released": 2015,
+            "player_count": 1,
+            "play_time": 100,
+            "age_to_play": 18,
+            "categories": [3, 4]
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "title": "Cyberpunk 2077",
+            "description": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour, and body modification.",
+            "designer": "Adam Badowski",
+            "year_released": 2020,
+            "player_count": 1,
+            "play_time": 60,
+            "age_to_play": 18,
+            "categories": [1, 5]
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "title": "Red Dead Redemption 2",
+            "description": "An epic tale of life in America at the dawn of the modern age.",
+            "designer": "Dan Houser",
+            "year_released": 2018,
+            "player_count": 1,
+            "play_time": 80,
+            "age_to_play": 18,
+            "categories": [2, 3]
+        }
+    },
+    {
+        "model": "raterapi.game",
+        "pk": 5,
+        "fields": {
+            "user": 5,
+            "title": "The Legend of Zelda: Breath of the Wild",
+            "description": "Step into a world of discovery, exploration, and adventure in The Legend of Zelda: Breath of the Wild.",
+            "designer": "Hidemaro Fujibayashi",
+            "year_released": 2017,
+            "player_count": 1,
+            "play_time": 120,
+            "age_to_play": 12,
+            "categories": [4, 5]
+        }
+    }
+]
