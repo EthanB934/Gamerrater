@@ -7,6 +7,7 @@ class GameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Game
+
         fields = ("id", "user", "title", "description", "picture", "designer", "year_released", "player_count", "play_time", "age_to_play")
         
 class GameViewSet(viewsets.ViewSet):
@@ -31,9 +32,6 @@ class GameViewSet(viewsets.ViewSet):
         game.play_time = request.data["play_time"]
         game.age_to_play = request.data["age_to_play"]
 
-        try: 
-            game.save()
-            serializer = GameSerializer(game, many=False)
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        except Exception as ex:
-            return Response(ex.args[0], status=status.HTTP_400_BAD_REQUEST)
+        game.save()
+        serializer = GameSerializer(game, many=False)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)

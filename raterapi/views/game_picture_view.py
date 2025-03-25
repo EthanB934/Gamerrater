@@ -8,7 +8,6 @@ from raterapi.models import GamePicture, Game
 class GamePictureSerializer(serializers.ModelSerializer):
     class Meta:
         model = GamePicture
-        fields = ("id","game_id", "picture",)
 
 class GamePictureViewSet(viewsets.ViewSet):
     def create(self, request):
@@ -22,19 +21,6 @@ class GamePictureViewSet(viewsets.ViewSet):
 
         game_picture.picture = data
         
-        try:
-            game_picture.save()
-            serializer = GamePictureSerializer(game_picture, many=False)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        except Exception as ex:
-            return Response(ex.args[0], status=status.HTTP_400_BAD_REQUEST)
-
-    def list(self, request):
-        game_pictures = GamePicture.objects.all()
-
-        # for game_picture in game_pictures:
-        #     if game_picture.game_id == request.data["gameId"]:
-        #         return game_picture
-
-        serializer = GamePictureSerializer(game_pictures, many=True)
+        game_picture.save()
+        serializer = GamePictureSerializer(game_picture, many=False)
         return Response(serializer.data, status=status.HTTP_200_OK)
