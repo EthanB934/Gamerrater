@@ -1,2 +1,3 @@
 from .user import UserViewSet
-from .category_view import CategoryViewSet
+from .CategoryView import CategoryViewSet
+from .GameView import GameViewSet
