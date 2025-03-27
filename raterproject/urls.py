@@ -3,11 +3,13 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include, path
 from rest_framework import routers
-from raterapi.views import CategoryViewSet, UserViewSet, GameViewSet
+from raterapi.views import CategoryViewSet, UserViewSet, GameViewSet, GameCategoryViewSet
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"categories", CategoryViewSet, "category")
 router.register(r"games", GameViewSet, "game")
+router.register(r"gamecategories", GameCategoryViewSet, "gamecategory")
+
 urlpatterns = [
     path("", include(router.urls)),
     path('login', UserViewSet.as_view({'post': 'user_login'}), name='login'),

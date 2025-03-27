@@ -26,3 +26,21 @@ class GameViewSet(viewsets.ViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Exception as ex:
             return Response(f'{ex.args[0]}', status=status.HTTP_404_NOT_FOUND)
+
+    def create(self, request):
+        game = Game()
+        game.user = request.auth.user
+        game.title = request.data["title"]
+        game.description = request.data["description"]
+        game.designer = request.data["designer"]
+        game.year_released = request.data["year"]
+        game.player_count = request.data["players"]
+        game.play_time = request.data["play_time"]
+        game.age_to_play = request.data["age_to_play"]
+
+        try:
+            game.save()
+            serializer = GameSerializer(game, many=False)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        except Exception as ex:
+            return Response(ex.args[0], status=status.HTTP_400_BAD_REQUEST)
