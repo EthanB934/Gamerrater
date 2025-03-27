@@ -3,6 +3,8 @@ from rest_framework.response import Response
 from raterapi.models import GameCategory, Game, Category
 
 class GameCategorySerializer(serializers.ModelSerializer):
+    
+
     class Meta:
         model = GameCategory
         fields = ("id", "game", "category")
@@ -12,8 +14,10 @@ class GameCategoryViewSet(viewsets.ViewSet):
         game_category_relationship = GameCategory()
         game = Game.objects.get(pk=request.data["gameId"])
         game_category_relationship.game = game
-        category = Category.objects.get(pk=request.data["categoryId"])
-        game_category_relationship.category = category
+
+        for category_id in request.data["categoryId"]:
+            category = Category.objects.get(pk=category_id)
+            game_category_relationship.category = category
 
         try:
             game_category_relationship.save()
