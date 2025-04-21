@@ -5,16 +5,21 @@ from raterapi.views.CategoryView import CategorySerializer
 
 class GameSerializer(serializers.ModelSerializer):
     categories = CategorySerializer(many=True)
+    is_owner = serializers.SerializerMethodField()
 
+    def get_is_owner(self, obj):
+        # Compares requesting authorized user's id to each objects user_id
+        return True if self.context["request"].auth.user == obj.user else False
+    
     class Meta:
         model = Game
-        fields = ("id", "title", "description", "designer", "year_released", "player_count", "play_time", "age_to_play", "categories")
+        fields = ("id", "is_owner", "title", "description", "designer", "year_released", "player_count", "play_time", "age_to_play", "categories")
 
 class GameViewSet(viewsets.ViewSet):
     def list(self, request):
         try:
             games = Game.objects.all()  
-            serializer = GameSerializer(games, many=True)
+            serializer = GameSerializer(games, many=True, context={"request": request})
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Exception as ex:
             return Response(f'{ex.args[0]}', status=status.HTTP_500_INTERNAL_SERVER_ERROR)
